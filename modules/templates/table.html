@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src= "https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
+</head>
+<body>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Create Table</a></li>
+        <li><a href="{{ url_for('records') }}">View Table</a></li>
+    </ul>
+  <section class="customTable-form">
+    <h1>Querying Form</h1>
+    <p>Please fill the following form with the required details.</p>
+    <form id="tableForm">
+      <div class="input-group">
+        <label for="name">Title</label>
+        <input id="username" name="title" type="text" value="{{ title }}"/>
+      </div>
+
+      <div class="input-group">
+        <label for="usergroup">Description</label>
+        <input id="usergroup" name="description" type="text" value="{{ description }}"/>
+      </div>
+
+       <div class="input-group">
+        <label for="websitename">Column Names</label>
+        <input id="website" name="fields" type="text" value="{{ columns }}"/>
+      </div>
+
+      <button type="submit">Send It!</button>
+    </form>
+  </section>
+    <div class="results">
+    <h2>Form Data</h2>
+    <pre></pre>
+  </div>
+  <table id="myTable" class="display" width="100%">
+      <thead>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      </thead>
+</table>
+
+
+<script type="text/javascript" src = "static/app.js">
+
+</script>
+
+</body>
+
+</html>
